@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Studio | Support & Privacy Center</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            color: #333; 
+            background-color: #f8fafc; 
+        }
+        header { text-align: center; margin: 40px 0 50px 0; }
+        h1 { color: #1e293b; font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { color: #64748b; font-size: 1.1rem; }
+        
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #e2e8f0;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.3s ease;
+            color: #64748b;
+            font-weight: bold;
+        }
+        .lang-btn.active {
+            background-color: #2563eb;
+            color: #fff;
+        }
+
+        .card { 
+            border: none; 
+            border-radius: 24px; 
+            padding: 35px; 
+            margin-bottom: 30px; 
+            background: white; 
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); 
+        }
+        h2 { color: #2563eb; margin-top: 0; border-bottom: 2px solid #eff6ff; padding-bottom: 12px; font-size: 1.5rem; }
+        
+        .app-list { list-style: none; padding: 0; }
+        .app-item { 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 20px 0; 
+            border-bottom: 1px solid #f1f5f9; 
+        }
+        .app-item:last-child { border-bottom: none; }
+        .app-info h3 { margin: 0; color: #1e293b; font-size: 1.15rem; }
+        .app-info p { margin: 4px 0 0 0; font-size: 0.95rem; color: #64748b; }
+        
+        .btn { 
+            background: #2563eb; 
+            color: white; 
+            padding: 12px 24px; 
+            text-decoration: none; 
+            border-radius: 12px; 
+            display: inline-block; 
+            font-weight: bold; 
+            transition: all 0.2s; 
+            border: none;
+        }
+        .btn:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3); }
+        
+        .policy-link { 
+            color: #2563eb; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        .policy-link:hover { background: #f0f7ff; }
+
+        .footer { 
+            text-align: center; 
+            font-size: 0.85em; 
+            color: #94a3b8; 
+            margin-top: 60px; 
+            padding-top: 30px; 
+            border-top: 1px solid #e2e8f0; 
+        }
+
+        /* 語言切換隱藏邏輯 */
+        [lang="en"] { display: none; }
+        .lang-en [lang="zh-Hant"] { display: none; }
+        .lang-en [lang="en"] { display: block; }
+    </style>
+</head>
+<body id="main-body">
+    
+    <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-zh" onclick="setLang('zh')">繁體中文</button>
+        <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+
+    <header>
+        <div lang="zh-Hant">
+            <h1>AJ Studio</h1>
+            <p class="subtitle">致力於打造簡潔、實用的行動應用程式</p>
+        </div>
+        <div lang="en">
+            <h1>AJ Studio</h1>
+            <p class="subtitle">Creating Simple and Practical Mobile Applications</p>
+        </div>
+    </header>
+    
+    <div class="card">
+        <h2 lang="zh-Hant">旗下應用程式</h2>
+        <h2 lang="en">Our Applications</h2>
+        
+        <div class="app-list">
+            <!-- 曝光助手 -->
+            <div class="app-item">
+                <div class="app-info">
+                    <div lang="zh-Hant">
+                        <h3>曝光助手 (Exposure Buddy)</h3>
+                        <p>精確曝光計算、景深與色溫工具</p>
+                    </div>
+                    <div lang="en">
+                        <h3>Exposure Buddy (Photo Calc)</h3>
+                        <p>Precision exposure, DOF and color temp calculator.</p>
+                    </div>
+                </div>
+                <a href="privacy.html" class="policy-link">
+                    <span lang="zh-Hant">隱私權政策</span>
+                    <span lang="en">Privacy Policy</span>
+                </a>
+            </div>
+
+            <!-- 樂透選號王 -->
+            <div class="app-item">
+                <div class="app-info">
+                    <div lang="zh-Hant">
+                        <h3>樂透選號王 (Lottery Master)</h3>
+                        <p>智能演算法、全餐包牌、AI 歷史回測</p>
+                    </div>
+                    <div lang="en">
+                        <h3>Lottery Master</h3>
+                        <p>Smart algorithms and historical backtesting.</p>
+                    </div>
+                </div>
+                <a href="privacy.html" class="policy-link">
+                    <span lang="zh-Hant">隱私權政策</span>
+                    <span lang="en">Privacy Policy</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 lang="zh-Hant">客戶支援與反饋</h2>
+        <h2 lang="en">Support & Feedback</h2>
+        
+        <div lang="zh-Hant">
+            <p>如果您在使用我們的任何應用程式時遇到問題，或是對新功能有任何想法，歡迎透過以下表單聯絡我們。</p>
+        </div>
+        <div lang="en">
+            <p>If you encounter any issues while using our apps or have ideas for new features, please feel free to reach out to us via the form below.</p>
+        </div>
+
+        <p style="text-align: center; margin: 20px 0;">
+            Email: <a href="mailto:flash.hyt@gmail.com" style="color: #2563eb; text-decoration: none; font-weight: 500;">flash.hyt@gmail.com</a>
+        </p>
+        
+        <div style="margin-top: 25px; text-align: center;">
+            <!-- 中文表單 -->
+            <a href="https://forms.gle/PbBXAnxFM7GdxjNw5" class="btn" lang="zh-Hant">前往支援表單</a>
+            <!-- 英文表單 -->
+            <a href="https://forms.gle/W3Bp8rUFZs1PjaP77" class="btn" lang="en">Go to Support Form</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 AJ Studio. All rights reserved.</p>
+        <p>
+            <span lang="zh-Hant">此網頁包含 AdMob 授權檔案</span>
+            <span lang="en">This site contains AdMob authorized file</span>
+            <a href="app-ads.txt" style="color: #94a3b8; text-decoration: underline;">app-ads.txt</a>
+        </p>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            const body = document.getElementById('main-body');
+            const btnZh = document.getElementById('btn-zh');
+            const btnEn = document.getElementById('btn-en');
+            
+            if (lang === 'en') {
+                body.classList.add('lang-en');
+                btnEn.classList.add('active');
+                btnZh.classList.remove('active');
+            } else {
+                body.classList.remove('lang-en');
+                btnZh.classList.add('active');
+                btnEn.classList.remove('active');
+            }
+        }
+
+        // 自動偵測語系
+        window.onload = function() {
+            const userLang = navigator.language || navigator.userLanguage; 
+            if (userLang.startsWith('en')) {
+                setLang('en');
+            }
+        };
+    </script>
+</body>
+</html>
